@@ -34,15 +34,7 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
     form.reset({ searchQuery });
   }, [form, searchQuery]);
 
-  const handleReset = () => {
-    form.reset({
-      searchQuery: "",
-    });
-
-    if (onReset) {
-      onReset();
-    }
-  };
+  
 
   return (
     <Form {...form}>
