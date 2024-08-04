@@ -65,22 +65,14 @@ const SearchBar = ({ onSubmit, onReset, placeHolder, searchQuery }: Props) => {
               <FormControl>
                 <Input
                   {...field}
-                  className="border-none shadow-none text-xl focus-visible:ring-0"
+                  className="border-none shadow-none text-l sm:text-xl md:text-xl lg:text-xl xl:text-xl  focus-visible:ring-0"
                   placeholder={placeHolder}
                 />
               </FormControl>
             </FormItem>
           )}
         />
-
-        <Button
-          onClick={handleReset}
-          type="button"
-          variant="outline"
-          className="rounded-full"
-        >
-          Reset
-        </Button>
+        
         <Button type="submit" className="rounded-full bg-orange-500">
           Search
         </Button>

@@ -4,13 +4,13 @@ import MainNav from "./MainNav";
 
 const Header = () => {
   return (
-    <div className="border-b-2 border-b-orange-500 py-6">
-      <div className="container mx-auto flex justify-between items-center">
+    <div className="pt-8">
+      <div className="container mx-auto flex justify-between items-center ">
         <Link
           to="/"
-          className="text-3xl font-bold tracking-tight text-orange-500"
+          className="text-3xl font-bold italic tracking-tight text-orange-500 px-2"
         >
-          Ali - Take away
+          ALI TAKE AWAY
         </Link>
         <div className="md:hidden">
           <MobileNav />

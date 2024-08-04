@@ -1,7 +1,6 @@
-import landingImage from "../assets/landing.png";
-import appDownloadImage from "../assets/appDownload.png";
 import SearchBar, { SearchForm } from "@/components/SearchBar";
 import { useNavigate } from "react-router-dom";
+import hero from "../assets/hero.png";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -13,30 +12,23 @@ const HomePage = () => {
   };
 
   return (
-    <div className="flex flex-col gap-12">
-      <div className="md:px-32 bg-white rounded-lg shadow-md py-8 flex flex-col gap-5 text-center -mt-16">
+    <div className="flex flex-col mb-96">
+
+      <div className="rounded-lg">
+      <img src={hero} className="object-cover rounded-2xl " />
+      </div>
+
+      <div className="md:px-10 mx-auto w-full   bg-white rounded-lg shadow-md py-4 flex flex-col gap-5 text-center  md:-mt-20 lg:-mt-80 xl:-mt-96 lg:w-1/2 ">
         <h1 className="text-5xl font-bold tracking-tight text-orange-600">
-          Tuck into a takeway today
+        Order your food Fast 
         </h1>
-        <span className="text-xl">Food is just a click away!</span>
+        <span className="text-xl">Restaurants and Cafes delivering near you</span>
         <SearchBar
-          placeHolder="Search by City or Town"
+          placeHolder="Enter your City "
           onSubmit={handleSearchSubmit}
         />
       </div>
-      <div className="grid md:grid-cols-2 gap-5">
-        <img src={landingImage} />
-        <div className="flex flex-col items-center justify-center gap-4 text-center">
-          <span className="font-bold text-3xl tracking-tighter">
-            Order takeaway even faster!
-          </span>
-          <span>
-            Download the MernEats App for faster ordering and personalised
-            recommendations
-          </span>
-          <img src={appDownloadImage} />
-        </div>
-      </div>
+      
     </div>
   );
 };
